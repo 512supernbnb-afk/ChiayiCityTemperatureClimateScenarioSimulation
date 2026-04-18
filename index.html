@@ -14,11 +14,10 @@
         body { margin: 0; padding: 0; }
         #map { height: 100vh; width: 100%; z-index: 1; }
         
-        /* --- 1. 電腦版控制面板優化 --- */
         .controls { 
         position: absolute; 
         top: 10px; 
-        left: 10px; /* 從 50px 縮減到 10px，增加地圖可見度 */
+        left: 10px; 
         z-index: 1000; 
         background: rgba(255, 255, 255, 0.95); 
         padding: 12px; 
@@ -26,10 +25,9 @@
         box-shadow: 0 2px 8px rgba(0,0,0,0.3); 
         font-family: "Microsoft JhengHei", sans-serif;
     
-        /* 🌟 核心修正：讓寬度在電腦上稍微大一點，但在手機上自動縮小 */
         width: clamp(160px, 20vw, 280px); 
     
-        max-height: 80vh; /* 增加最大高度，電腦版不用頻繁捲動 */
+        max-height: 80vh; 
         overflow-y: auto;
         }
         .controls button { 
@@ -51,7 +49,6 @@
         border-radius: 8px;
         font-family: "Microsoft JhengHei", sans-serif;
     
-        /* 🌟 同樣使用動態寬度 */
         width: clamp(140px, 18vw, 260px);
         max-height: 40vh;
         overflow-y: auto;
@@ -99,14 +96,13 @@
         left: 5px; 
         top: 5px; 
         padding: 8px;
-        /* 手機版強制寬度，避免 clamp 算出來還是太大 */
         width: 155px; 
     }
     
     .controls button { 
         padding: 6px 0; 
         font-size: 11px; 
-        width: 47%; /* 讓定位與返回並排更緊湊 */
+        width: 47%; 
     }
 
     .controls select { 
@@ -115,21 +111,18 @@
         margin-bottom: 4px;
     }
 
-    /* 說明欄位在手機上縮小一點點 */
     .info-legend {
         width: 140px;
         font-size: 11px;
         padding: 8px;
     }
 
-    /* 右上角行政區選單：固定寬度 */
     .village-control {
         width: 125px;
         padding: 6px;
         font-size: 11px;
     }
-    
-    /* 隱藏過長的裝飾文字，只保留核心 */
+  
     .info-legend h4 { font-size: 12px; margin-bottom: 4px; }
     .leaflet-control-layers, .custom-menu {
         margin: 5px !important;
@@ -139,7 +132,7 @@
     select {
         padding: 2px !important;
         font-size: 12px !important;
-        height: 30px !important; /* 降低高度 */
+        height: 30px !important; 
     }
 }
     </style>
